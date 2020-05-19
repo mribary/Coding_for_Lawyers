@@ -1,0 +1,36 @@
+Extract key information from text files in the attached `texts.zip` file. The five text files include the headings of UK Supreme Court judgements. Extract the following:
+
+(1) neutral citation
+	e.g. “[2012] UKSC 43”
+(2) the date when the case was heard
+	e.g. "23 July 2012"
+(3) name(s) of the judges making the judgement
+	e.g. a list of names in a list object: ['Hope', 'Walker', 'Mance', 'Clarke', 'Sumption']
+
+Exploring the data is an important step in the processing pipeline. You will note that the two of the five cases have one of the judges’ names before the “before” phrase. You will always find some inconsistency in your data which requires your code to be smarter and more flexible. You cannot assume that the structure of the text will always be identical.
+
+The challenge is presented here in three levels of difficulty.
+
+Yellow-belt challenge:
+
+Copy and paste the five texts into separate variables as multiline strings just like we did in the first group session. Use regular expressions to locate the beginning and end of (1) a neutral citation, (2) a date, or (3) a name, and load the information into a variable. You may need to use a loop to automate the process.
+
+Orange-belt challenge:
+
+Instead of copy-pasting, use a Python function to read the .txt files into string variables, or even better, into one list object. Similarly, use a Python function to write your result into a .txt file. You may need to search and browse the Python documentation, StackOverflow or some other relevant source. The remaining part of the yellow-belt challenge is the same.
+
+Green-belt challenge:
+
+In addition to the challenges above, build a dictionary object which includes the gender of the individual judges. You may need to read about the structure of a dictionary object before attempting this part. The basic structure is the following: {key1 : value1, key2 : value2} where value can be a dictionary itself. For the purpose of this challenge, you will build a nested dictionary. Neutral citation will be the keys and a dictionary of judges will be the values at the top level. In the nested dictionary of judges, you will have names of judges as keys and the gender of judges as values. See the example below which includes information from one text file - yours should have all five.
+
+	{
+		“[2020 UKSC 1]”: {
+			"Reed”: “Male”,
+			"Hodge”: “Male",
+			"Briggs”: “Male”, 
+			"Arden”: “Female”, 
+			"Kitchin”: “Male”
+		}
+	}
+
+Good luck and have fun!
